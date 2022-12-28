@@ -1,0 +1,71 @@
+.myNav {
+    min-height: 10%;
+    padding: 16px 8px;
+    background: lightblue;
+    justify-content: space-between;
+}
+
+.link {
+    margin-right: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 500ms;
+}
+
+.link:hover {
+    color: orange;
+}
+
+.bar {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+}
+
+
+
+@media (max-width:600px) {
+    .link{
+        display: block;
+    }
+    .bar {
+        display: block;
+    }
+
+    .closeNav {
+        position: absolute;
+        width: 100%;
+        top: -50%;
+        animation: closeNav 800ms;
+    }
+
+    .openNav {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        animation: openNav 800ms;
+
+    }
+}
+
+@keyframes openNav {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes closeNav {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -50%;
+    }
+}
